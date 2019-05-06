@@ -6,7 +6,7 @@ The original version of this library uses the klauspost RS library, but templexx
 
 The original also uses a lot of insecure hash functions for checksums, in this version all the junk is removed and HighwayHash is used, a hash function suitable for simple checksums with extremely good cache locality and strong collision resistance.
 
-Aside from the elimination of slow and insecure hash functions and retargeting the templex reed solomon library, nothing else is altered.
+Aside from the elimination of slow and insecure hash functions and retargeting the templexxx reed solomon library, nothing else is altered.
 
 
 ----
