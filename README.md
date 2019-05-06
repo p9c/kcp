@@ -1,7 +1,22 @@
-<img src="kcp-go.png" alt="kcp-go" height="50px" />
+# kcp9
+
+## A fork of KCP using the fastest checksum and RS codecs available
+
+The original version of this library uses the klauspost RS library, but templexxx version is a lot faster.
+
+The original also uses a lot of insecure hash functions for checksums, in this version all the junk is removed and HighwayHash is used, a hash function suitable for simple checksums with extremely good cache locality and strong collision resistance.
+
+Aside from the elimination of slow and insecure hash functions and retargeting the templex reed solomon library, nothing else is altered.
 
 
-[![GoDoc][1]][2] [![Powered][9]][10] [![MIT licensed][11]][12] [![Build Status][3]][4] [![Go Report Card][5]][6] [![Coverage Statusd][7]][8]
+----
+
+#### TODO: old version readme to be revised later
+
+<img src="assets/kcp-go.png" alt="kcp-go" height="50px" />
+
+
+<!-- [![GoDoc][1]][2] [![Powered][9]][10] [![MIT licensed][11]][12] [![Build Status][3]][4] [![Go Report Card][5]][6] [![Coverage Statusd][7]][8]
 
 [1]: https://godoc.org/github.com/xtaci/kcp-go?status.svg
 [2]: https://godoc.org/github.com/xtaci/kcp-go
@@ -14,7 +29,9 @@
 [9]: https://img.shields.io/badge/KCP-Powered-blue.svg
 [10]: https://github.com/skywind3000/kcp
 [11]: https://img.shields.io/badge/license-MIT-blue.svg
-[12]: LICENSE
+[12]: LICENSE -->
+
+
 
 ## Introduction
 
@@ -41,7 +58,7 @@ For complete documentation, see the associated [Godoc](https://godoc.org/github.
 
 ## Specification
 
-<img src="frame.png" alt="Frame Format" height="109px" />
+<img src="assets/frame.png" alt="Frame Format" height="109px" />
 
 ```
 +-----------------+
@@ -130,7 +147,7 @@ ok  	github.com/xtaci/kcp-go	50.349s
 
 
 ## Typical Flame Graph
-![Flame Graph in kcptun](flame.png)
+![Flame Graph in kcptun](assets/flame.png)
 
 ## Key Design Considerations
 
